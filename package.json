@@ -1,15 +1,31 @@
 {
-  "name": "dalil-ai",
+  "name": "turath-ai-monorepo",
   "version": "1.0.0",
-  "description": "A travel app with an AI assistant, hotel, restaurant, and recent places features",
+  "description": "Turath-AI: An AI-powered Moroccan cultural and heritage explorer",
   "private": true,
-  "workspaces": ["frontend", "backend"],
   "scripts": {
-    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
-    "build": "npm run build --workspaces",
-    "test": "npm run test --workspaces",
-    "lint": "npm run lint --workspaces"
+    "dev": "concurrently \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\"",
+    "build": "npm run build --workspace=frontend && npm run build --workspace=backend",
+    "start": "npm start --workspace=backend",
+    "lint": "npm run lint --workspaces",
+    "frontend": "npm run dev --workspace=frontend",
+    "backend": "npm run dev --workspace=backend"
   },
-  "devDependencies": {"concurrently": "^8.2.0"},
-  "engines": {"node": ">=18.0.0", "npm": ">=9.0.0"}
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "Morocco",
+    "Heritage",
+    "AI",
+    "Cultural Explorer",
+    "Zellige",
+    "GIS Map"
+  ],
+  "author": "Turath-AI Team",
+  "license": "MIT"
 }

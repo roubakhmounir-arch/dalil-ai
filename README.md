@@ -1,91 +1,115 @@
-# Dalil AI - Travel Assistant App
+# 🏛️ Turath-AI: Moroccan Cultural & Heritage Explorer
 
-🌍 **Dalil AI** is a modern travel application featuring an AI-powered assistant, hotel and restaurant discovery, and personalized recent places tracking. It supports multiple languages: **French**, **Arabic**, and **English**.
+An AI-powered web application that celebrates Moroccan cultural heritage through interactive experiences, traditional architecture visualization, and intelligent mosaic analysis.
 
-## Features
+## ✨ Features
 
-✨ **AI Travel Assistant** - Get personalized travel recommendations and answers to your questions
-🏨 **Hotel Discovery** - Find and compare hotels with ratings and amenities
-🍽️ **Restaurant Guide** - Browse restaurants by cuisine and location
-📍 **Recent Places** - Track and revisit your favorite locations
-🌐 **Multi-language Support** - French, Arabic, and English interfaces
+### 🎨 Zellige AI Scanner
+- Upload and analyze Moroccan mosaic images
+- AI-powered identification of mosaic styles (Tetouani, Fassi, Andalusian)
+- Geometric composition breakdown
+- Visual feedback with authentic Moroccan design
 
-## Tech Stack
+### 🗺️ Heritage GIS & Water Network Map
+- Interactive map of all Moroccan provinces (including southern regions)
+- Toggleable layers showing historical points of interest
+- Traditional water fountains ("Seqqayas") locations
+- Historical Medina water distribution networks
+- Real-time exploration of cultural landmarks
 
-- **Frontend**: React (Web) & React Native (Mobile)
-- **Backend**: Node.js/Express
-- **AI Integration**: OpenAI API
-- **Database**: PostgreSQL/MongoDB
-- **Real-time**: WebSocket/Socket.io
-- **Styling**: CSS3 with Responsive Design
+### 🏘️ Moroccan Design System
+- **Zellige Patterns**: Authentic geometric SVG backgrounds
+- **Moorish Architecture**: Custom arch-inspired border-radius utilities
+- **Traditional Colors**: Majorelle Blue, Terracotta, Desert Sand, Mint Green
+- **Arabic Typography**: Modern + decorative fonts for authentic feel
 
-## Getting Started
+## 🏗️ Tech Stack
 
-### Prerequisites
-- Node.js 18+
-- npm or yarn
+### Frontend
+- **Framework**: Next.js 14+ (React)
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Maps**: Leaflet + React-Leaflet
+- **HTTP Client**: Axios
 
-### Installation
+### Backend
+- **Runtime**: Node.js
+- **Framework**: Express.js
+- **Database**: Mock JSON (extensible to MongoDB/PostgreSQL)
+- **Middleware**: CORS, Morgan logging
+- **Environment**: dotenv
+
+## 📦 Project Structure
+
+```
+turath-ai/
+├── frontend/
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── layout.tsx
+│   │   │   ├── page.tsx
+│   │   │   ├── scanner/
+│   │   │   │   └── page.tsx
+│   │   │   └── map/
+│   │   │       └── page.tsx
+│   │   ├── components/
+│   │   │   ├── ZelligeBackground.tsx
+│   │   │   ├── MoorArch.tsx
+│   │   │   ├── HeritageMaps.tsx
+│   │   │   └── ZelligeScanner.tsx
+│   │   ├── styles/
+│   │   │   └── globals.css
+│   │   └── utils/
+│   │       └── api.ts
+│   ├── public/
+│   ├── next.config.js
+│   ├── tailwind.config.js
+│   └── package.json
+├── backend/
+│   ├── src/
+│   │   ├── server.js
+│   │   ├── routes/
+│   │   ├── controllers/
+│   │   ├── data/
+│   │   └── middleware/
+│   ├── .env
+│   └── package.json
+├── .gitignore
+├── .env.example
+└── package.json
+```
+
+## 🚀 Quick Start
 
 ```bash
-# Clone repository
+# Clone and setup
 git clone https://github.com/roubakhmounir-arch/dalil-ai.git
 cd dalil-ai
+git checkout turath-ai
 
 # Install dependencies
 npm install
-
-# Configure environment
-cp .env.example .env
 
 # Start development
 npm run dev
 ```
 
-This will start:
-- Backend: http://localhost:5000
-- Frontend: http://localhost:3000
+Frontend: http://localhost:3000
+Backend: http://localhost:5000
 
-## API Endpoints
+## 🎨 Design System
 
-### AI Assistant
-- `POST /api/ai/chat` - Chat with AI assistant
-- `POST /api/ai/recommendations` - Get travel recommendations
+**Colors:**
+- Primary: Majorelle Blue (#1A5F7A)
+- Secondary: Terracotta (#E2725B)
+- Background: Desert Sand (#F9F6F0)
+- Accent: Mint Green (#3EB489)
 
-### Hotels
-- `GET /api/hotels` - List hotels with filters
-- `GET /api/hotels/:id` - Get hotel details
-- `POST /api/hotels/search` - Search hotels
+**Typography:**
+- Body: Modern sans-serif (Inter, Poppins)
+- Headings: Arabic-inspired decorative (Amiri, Cairo)
 
-### Restaurants
-- `GET /api/restaurants` - List restaurants with filters
-- `GET /api/restaurants/:id` - Get restaurant details
-- `POST /api/restaurants/search` - Search restaurants
+## 📝 License
 
-### Places
-- `GET /api/places` - Get recent places
-- `POST /api/places` - Add a place
-- `GET /api/places/:id` - Get place details
-- `DELETE /api/places/:id` - Delete a place
-
-## Languages Supported
-
-- 🇬🇧 English
-- 🇫🇷 Français (French)
-- 🇸🇦 العربية (Arabic)
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## License
-
-MIT License - See [LICENSE](LICENSE) file for details.
-
-## Author
-
-**Roubakh Mounir**
-- GitHub: [@roubakhmounir-arch](https://github.com/roubakhmounir-arch)
-
----
-Made with ❤️ for travelers everywhere
+MIT - Made with ❤️ for Moroccan Heritage
